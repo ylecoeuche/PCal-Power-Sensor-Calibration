@@ -1,0 +1,30 @@
+% Generated TIMESTAMP
+timestamp = '2018-05-11T1145';
+
+% Short TIMESTAMP
+ts = 'D20180511T1145';
+
+% Devices
+dev1 = 'GS';
+dev2 = 'WS1';
+
+% Generated file names
+dirname = '2018-05-11T1145_rat_WS1_GS';
+dev1ReflFilename = '2018-05-11T1145_meas_GSRefl.csv';
+dev2TranFilename = '2018-05-11T1145_meas_WS1Tran.csv';
+dev1TranFilename = '2018-05-11T1145_meas_GSTran.csv';
+dev2ReflFilename = '2018-05-11T1145_meas_WS1Refl.csv';
+
+ScriptForThisRun = 'D20180511T1145_CalcRat_WS1_GS.m';
+
+% Loading time series
+dev1Refl = pcalLoadValues(dev1ReflFilename);
+dev2Tran = pcalLoadValues(dev2TranFilename);
+dev1Tran = pcalLoadValues(dev1TranFilename);
+dev2Refl = pcalLoadValues(dev2ReflFilename);
+
+% Average background levels, must input these values manually.
+dev1ReflBg = 0.000174046;
+dev2TranBg = -0.000243088;
+dev1TranBg = 0.000188255;
+dev2ReflBg = -0.000242831;
